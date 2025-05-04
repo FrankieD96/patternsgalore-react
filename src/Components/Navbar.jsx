@@ -9,17 +9,17 @@ function Navbar() {
 
   return (
     <div className="w-full border-b border-[var(--color-text)] bg-[var(--color-mainPageBackground)] font-nunito">
-      <div className="flex items-center justify-between px-8 py-4">
+      <div className="flex items-center justify-between px-8 py-0">
         {/* Left: Site Title */}
-        <Link to="/prints" className="text-2xl text-[var(--color-text)]">
-            Patterns Galore
+        <Link to="/prints" >
+          <img src="public/images/logo.png" alt="Patterns Galore logo" className="h-20 md:h-24" />
         </Link>
 
 
         {/* Center: Menu (desktop) or Hamburger (mobile) */}
         <div className="flex-1 flex justify-center">
           {/* Desktop menu */}
-          <div className="hidden md:flex gap-8 text-[var(--color-text)] text-base">
+          <div className="hidden md:flex gap-8 text-[var(--color-text)] text-[18px]">
             <Link
               to="/prints"
               className="transition-transform duration-200 transform hover:scale-110"
@@ -68,7 +68,7 @@ function Navbar() {
 
       {/* Mobile dropdown menu */}
       {menuOpen && (
-        <div className="flex flex-col items-center gap-4 px-8 pb-4 md:hidden text-[var(--color-text)] text-base">
+        <div className="flex flex-col items-center gap-4 px-8 pb-4 md:hidden text-[var(--color-text)] text-[18px]">
           <Link
             to="/prints"
             className="transition-transform duration-200 transform hover:scale-110"

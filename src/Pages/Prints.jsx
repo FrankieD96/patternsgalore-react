@@ -11,7 +11,13 @@ function Prints() {
         badge="NEW"
       />
       <PrintCard
-        image="public/images/SCAN_ONLY_Oil_Spill-.jpg"
+        image="public/images/EDIT_Plant_Cells-.jpg"
+        title="Print 2"
+        price={25}
+        badge="50% OFF"
+      />
+      <PrintCard
+        image="public/images/_black_and_white_ink_drawing_04.jpeg"
         title="Print 2"
         price={25}
         badge="50% OFF"
