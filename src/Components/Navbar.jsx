@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { IoIosSearch } from "react-icons/io";
 import { FiShoppingCart, FiUser } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,24 +17,24 @@ function Navbar() {
         <div className="flex-1 flex justify-center">
           {/* Desktop menu */}
           <div className="hidden md:flex gap-8 text-[var(--color-text)] text-base">
-            <a
-              href="#"
+            <Link
+              to="/prints"
               className="transition-transform duration-200 transform hover:scale-110"
             >
               Prints
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/frames"
               className="transition-transform duration-200 transform hover:scale-110 text-center"
             >
               Hand Painted Frames & Illustrations
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/commissions"
               className="transition-transform duration-200 transform hover:scale-110"
             >
               Commissions
-            </a>
+            </Link>
           </div>
 
           {/* Mobile hamburger toggle */}
@@ -45,7 +46,7 @@ function Navbar() {
           </button>
         </div>
 
-        {/* Right: Icon buttons */}
+        {/* Right: Icon buttons (always visible) */}
         <div className="flex items-center gap-6 text-[var(--color-text)]">
           <button className="transition-transform duration-200 transform hover:scale-110">
             <IoIosSearch size={22} />
@@ -59,27 +60,30 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu dropdown */}
+      {/* Mobile dropdown menu */}
       {menuOpen && (
         <div className="flex flex-col items-center gap-4 px-8 pb-4 md:hidden text-[var(--color-text)] text-base">
-          <a
-            href="#"
+          <Link
+            to="/prints"
             className="transition-transform duration-200 transform hover:scale-110"
+            onClick={() => setMenuOpen(false)}
           >
             Prints
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/frames"
             className="transition-transform duration-200 transform hover:scale-110 text-center"
+            onClick={() => setMenuOpen(false)}
           >
             Hand Painted Frames & Illustrations
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/commissions"
             className="transition-transform duration-200 transform hover:scale-110"
+            onClick={() => setMenuOpen(false)}
           >
             Commissions
-          </a>
+          </Link>
         </div>
       )}
     </div>
@@ -87,6 +91,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-
-

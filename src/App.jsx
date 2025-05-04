@@ -1,15 +1,28 @@
-import Navbar from "./Components/Navbar";
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import Prints from './Pages/Prints';
+import Frames from './Pages/Frames';
+import Commissions from './Pages/Commissions';
 
 function App() {
   return (
     <div className="min-h-screen bg-[var(--color-mainPageBackground)]">
       <Navbar />
+
       <main className="p-8">
-        {/* Content goes here */}
+        <Routes>
+          {/* Use Prints as the homepage for now */}
+          <Route path="/" element={<Prints />} />
+          <Route path="/prints" element={<Prints />} />
+          <Route path="/frames" element={<Frames />} />
+          <Route path="/commissions" element={<Commissions />} />
+        </Routes>
       </main>
     </div>
   );
 }
 
 export default App;
+
+
 
