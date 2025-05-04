@@ -1,19 +1,15 @@
-
+import Navbar from "./Components/Navbar";
 
 function App() {
-
   return (
-    <div>
-      <div>
-        <div className="h-screen bg-[var(--color-background)]">
-          <h1 className="text-4xl font-nunito text-black">Patterns Galore</h1>
-        </div>
-      </div>  
-      <div>
-
-      </div>
-    </div>  
-  )
+    <div className="min-h-screen bg-[var(--color-mainPageBackground)]">
+      <Navbar />
+      <main className="p-8">
+        {/* Content goes here */}
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
+

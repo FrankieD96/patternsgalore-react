@@ -1,6 +1,8 @@
 :root {
   --color-logo: #1A1F16;
   --color-background: #4A7856;
+  --color-mainPageBackground: #BEE5BF;
+  --color-text: #1A1F16;
 }
 
 @import "tailwindcss";
